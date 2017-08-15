@@ -66,7 +66,7 @@ public class ScanManager : MonoBehaviour, IInputClickHandler
         if (SpatialUnderstandingDll.Imports.QueryPlayspaceStats(statsPtr) != 0)
         {
             var stats = SpatialUnderstanding.Instance.UnderstandingDLL.GetStaticPlayspaceStats();
-            this.InstructionTextMesh.text = string.Format("TotalSurfaceArea: {0:0.##} - WallSurfaceArea: {1:0.##} - HorizSurfaceArea: {2:0.##}", stats.TotalSurfaceArea, stats.WallSurfaceArea, stats.HorizSurfaceArea);
+            this.InstructionTextMesh.text = string.Format("TotalSurfaceArea: {0:0.##}\nWallSurfaceArea: {1:0.##}\nHorizSurfaceArea: {2:0.##}", stats.TotalSurfaceArea, stats.WallSurfaceArea, stats.HorizSurfaceArea);
         }
     }
 
